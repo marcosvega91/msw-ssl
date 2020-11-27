@@ -22,7 +22,7 @@ How we can solve ? We can create a self signed certifcate and use SSL on our app
 
 All my configuration are made on a Mac
 
-I have installed `mkcert` using [`brew`](https://brew.sh/)
+I have installed [`mkcert`](https://github.com/FiloSottile/mkcert) using [`brew`](https://brew.sh/)
 
 ```bash
 brew install mkcert
@@ -59,7 +59,7 @@ npm start
 
 ### Test
  
-I have created also a test case using playwright. To run test you should start yor application first and the you can run 
+I have created also a test case using playwright. To run test you should start your application first and then you can run 
 
 ```bash
 yarn test

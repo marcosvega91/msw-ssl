@@ -3,7 +3,7 @@
 ## Example of usage
 
 MSW is a very great tool for testing and for creating a mock server in a very easy way.
-Anyway many users could have problems using it when they are running their application not on `localhost` domain.
+Many users could have problems using it when they are running their application not on `localhost` domain.
 
 I have two use cases in mind:
 
@@ -12,11 +12,11 @@ I have two use cases in mind:
 
 In both cases I can't access my application using `localhost` but I should use the local IP of my network or the IP of the container.
 
-MSW is using service worker to do all the magic and service workers require to use [site through HTTPS](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+MSW is using service workers to do all the magic but they require to be used [through HTTPS](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 
 ## How to solve
 
-How we can solve ? We can create a self signed certifcate and use SSL on our application. Great!
+How we can solve ? We can create a self signed certifcate and use SSL on our application. Great!😎
 
 ## Installation
 
@@ -42,9 +42,9 @@ npm install
 Create a local certificate by running
 ```bash
 mkdir -p .cert
-mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem "localhost"
+mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem localhost
 ```
-If you want to use the certificate for more domains you can append them after "localhost", I have added my local IP for example
+If you want to use the certificate for more domains you can append them after localhost, I have added my local IP for example
 
 ### Run
 
@@ -64,9 +64,7 @@ I have created also a test case using playwright. To run test you should start y
 ```bash
 yarn test
 ```
-
 or 
-
 ```bash
 npm test
 ```

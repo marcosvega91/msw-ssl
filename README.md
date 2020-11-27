@@ -46,6 +46,8 @@ mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem localhost
 ```
 If you want to use the certificate for more domains you can append them after localhost, I have added my local IP for example
 
+To make it works on mobile or other systems you could install the CA certificate. See [this section](https://github.com/FiloSottile/mkcert#installing-the-ca-on-other-systems) on `mkcert` library 
+
 ### Run
 
 After installation you can run your application using

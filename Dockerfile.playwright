@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/playwright:focal
 
 RUN apt update
 
-RUN apt install -y libnss3-tools 
+RUN apt install -y libnss3-tools build-essential curl file
 
 WORKDIR /usr/src/app
 
@@ -19,7 +19,6 @@ RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 
 USER root
 
-RUN apt install -y build-essential curl file
 ENV LINUXBREWHOME=/home/linuxbrew/.linuxbrew
 ENV PATH=$LINUXBREWHOME/bin:$PATH
 ENV PKG_CONFIG_PATH=$LINUXBREWHOME/lib64/pkgconfig:$LINUXBREWHOME/lib/pkgconfig:$PKG_CONFIG_PATH
